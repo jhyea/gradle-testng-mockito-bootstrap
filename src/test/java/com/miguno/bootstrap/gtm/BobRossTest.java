@@ -30,14 +30,15 @@ public class BobRossTest {
     @Test
     public void shouldCommunicateWhenPainting() {
         // given
-        PrintStream printStream = mock(PrintStream.class);
-        BobRoss bob = new BobRoss(ANY_PAINTING_ELEMENTS, printStream);
+        PrintStream printStream2 = mock(PrintStream.class);
+        BobRoss bob = new BobRoss(ANY_PAINTING_ELEMENTS, printStream2);
 
         // when
         bob.paintPicture();
 
         // then
-        verify(printStream, times(ANY_PAINTING_ELEMENTS.size())).println(any(String.class));
+        verify(printStream2, times(ANY_PAINTING_ELEMENTS.size())).println(any(String.class));
+        
     }
 
     /**
